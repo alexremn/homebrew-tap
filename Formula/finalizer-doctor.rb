@@ -11,7 +11,7 @@ class FinalizerDoctor < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_darwin_amd64.tar.gz"
-      sha256 "f8cdf3c7f6c07adcd9b305cc820049a2d8e4fe46696a6771e1ed59eae8a28308"
+      sha256 "c47dd4e0a49c4c42f0972601ae8f97f9cb01cdc6c6dd8254b31bcab10d36c5c8"
 
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
@@ -20,7 +20,7 @@ class FinalizerDoctor < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_darwin_arm64.tar.gz"
-      sha256 "c874296549015bca79dc1ca9ee76a181f6071d8b71c9f115c7fba1f51e845f02"
+      sha256 "624c7501c1e3ebff5aa08036624393c256b9d04433121cc9c62a699225933594"
 
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
@@ -32,7 +32,7 @@ class FinalizerDoctor < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_linux_amd64.tar.gz"
-      sha256 "a06c549d5fbc93550397d5ae7872cd23b17edfa274fdf5a163450b7a4c3d418b"
+      sha256 "ad4823224a25ce358ce729fa370f77e709c96a8077466fca4542a052ea916f2c"
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
         bin.install "kubectl-fid"
@@ -40,7 +40,7 @@ class FinalizerDoctor < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_linux_arm64.tar.gz"
-      sha256 "77ff34685c63f1102fd9707b6e54c204475a9d193dcaab32c4329bf02bb8ea4f"
+      sha256 "ea345fd87497af44ad2f2649a75c3c2695c9040cdba52a33c7e4e45dc9855dfc"
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
         bin.install "kubectl-fid"
