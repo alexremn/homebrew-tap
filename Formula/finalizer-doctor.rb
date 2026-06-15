@@ -5,13 +5,13 @@
 class FinalizerDoctor < Formula
   desc "Safely diagnose and clear finalizers on stuck-Terminating Kubernetes resources"
   homepage "https://github.com/alexremn/finalizer-doctor"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_darwin_amd64.tar.gz"
-      sha256 "c47dd4e0a49c4c42f0972601ae8f97f9cb01cdc6c6dd8254b31bcab10d36c5c8"
+      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.1/finalizer-doctor_darwin_amd64.tar.gz"
+      sha256 "ada71878f4ecfa9436c0844214d0fab1f667a1901e53c00a242d89e2afaa7525"
 
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
@@ -19,8 +19,8 @@ class FinalizerDoctor < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_darwin_arm64.tar.gz"
-      sha256 "624c7501c1e3ebff5aa08036624393c256b9d04433121cc9c62a699225933594"
+      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.1/finalizer-doctor_darwin_arm64.tar.gz"
+      sha256 "f9deb3a31c697b48f4cd9f99bb5502cc7e5973c2698df0cf175719f05636c20f"
 
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
@@ -31,16 +31,16 @@ class FinalizerDoctor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_linux_amd64.tar.gz"
-      sha256 "ad4823224a25ce358ce729fa370f77e709c96a8077466fca4542a052ea916f2c"
+      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.1/finalizer-doctor_linux_amd64.tar.gz"
+      sha256 "400604029eaaf909a235b7e8045262d68344dbc565d58f18cf44f8db799abec3"
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
         bin.install "kubectl-fid"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.0/finalizer-doctor_linux_arm64.tar.gz"
-      sha256 "ea345fd87497af44ad2f2649a75c3c2695c9040cdba52a33c7e4e45dc9855dfc"
+      url "https://github.com/alexremn/finalizer-doctor/releases/download/v0.1.1/finalizer-doctor_linux_arm64.tar.gz"
+      sha256 "58d4a74b22e45694dfbc801d8bc141329b84da4adfd6d47cf2a6a9f84fdba5e1"
       define_method(:install) do
         bin.install "kubectl-finalizer_doctor"
         bin.install "kubectl-fid"
