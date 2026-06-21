@@ -1,19 +1,17 @@
 # homebrew-tap
 
-Homebrew tap for [finalizer-doctor](https://github.com/alexremn/finalizer-doctor) —
-a safe stuck-`Terminating` doctor for Kubernetes (`kubectl finalizer-doctor`).
+Homebrew tap for [@alexremn](https://github.com/alexremn)'s tools.
 
-## Install
+## Available casks
 
-```bash
-brew install alexremn/tap/finalizer-doctor
-```
-
-This installs both `kubectl-finalizer_doctor` and `kubectl-fid` on your `PATH`, so
-`kubectl finalizer-doctor` and `kubectl fid` work immediately.
+| Tool | Install | What it does |
+|------|---------|--------------|
+| [finalizer-doctor](https://github.com/alexremn/finalizer-doctor) | `brew install alexremn/tap/finalizer-doctor` | Safely diagnose/clear finalizers on stuck-`Terminating` Kubernetes resources (`kubectl finalizer-doctor` / `kubectl fid`) |
+| [keyspan](https://github.com/alexremn/keyspan) | `brew install alexremn/tap/keyspan` | Secret blast-radius graph — "if I rotate this credential, what breaks and who owns it?" |
+| [kubectl-fieldlord](https://github.com/alexremn/kubectl-fieldlord) | `brew install alexremn/tap/kubectl-fieldlord` | Explain Server-Side Apply field ownership, drift, and clobber risk |
 
 ## How this tap is maintained
 
-`Formula/finalizer-doctor.rb` is generated and committed automatically by
-[GoReleaser](https://goreleaser.com) from the finalizer-doctor release workflow on
-each tagged release. Do not edit it by hand.
+Casks under `Casks/` are generated and committed automatically by
+[GoReleaser](https://goreleaser.com) from each project's release workflow on every
+tagged release. Do not edit them by hand.
