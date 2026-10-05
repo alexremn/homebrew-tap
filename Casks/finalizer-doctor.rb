@@ -34,11 +34,9 @@ cask "finalizer-doctor" do
   binary "kubectl-finalizer_doctor"
   binary "kubectl-fid"
 
-  postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      ["kubectl-finalizer_doctor", "kubectl-fid"].each do |b|
-        system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/#{b}"]
-      end
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "kubectl-finalizer_doctor", "kubectl-fid"], chdir: "."
     end
   end
 
