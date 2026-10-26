@@ -6,25 +6,25 @@ cask "kubectl-fieldlord" do
     end
   end
 
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     on_arm do
-      sha256 "ed2011a89314a7a8231a1633ac93a3098e5cbcff9359337f8c3ce4a1cf32060b"
+      sha256 "efe5866303d149ffb9c14b28e60f9e67bd01f8d0b99ff258355ed50fc3a0d4f1"
       url "https://github.com/alexremn/kubectl-fieldlord/releases/download/v#{version}/kubectl-fieldlord_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "88ddcc4f0afa17b14d4a18361cd1cacf66026de78569c312a52cfa711c0de3d8"
+      sha256 "cb7b752cff1ec056c17a9054d9d45fb0888da7dbacf614cd7481810131590e95"
       url "https://github.com/alexremn/kubectl-fieldlord/releases/download/v#{version}/kubectl-fieldlord_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "68316f8f7487838db8fece3bee06c62e24d17e58f11b1b9628d6d7f231f68607"
+      sha256 "d6747ba0d254eee70b976677a4f9198dc0e6d93c158b0bb060ade20aa58853ef"
       url "https://github.com/alexremn/kubectl-fieldlord/releases/download/v#{version}/kubectl-fieldlord_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "bcd6e3b21459a3cea991bc73d47840dcd3127a807efbe9b23cf594c75e88599a"
+      sha256 "f85e2b08a7d9a5c53e5d492db7e1d8754f340b2de02d76fcfc1390f1ead0889d"
       url "https://github.com/alexremn/kubectl-fieldlord/releases/download/v#{version}/kubectl-fieldlord_linux_amd64.tar.gz"
     end
   end
