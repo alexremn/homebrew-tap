@@ -6,25 +6,25 @@ cask "finalizer-doctor" do
     end
   end
 
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     on_arm do
-      sha256 "df77c6b90f7c1bea112e2812e4093840d371965f59c4509f54e7a458676aad73"
+      sha256 "c37ea7e0c6689351b7a752f2b2955fafedf9634563e0a48cc59c496ab7a83ed6"
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v#{version}/finalizer-doctor_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "693775a71d99bebcde42c4e0710e4caa03d138b7c4e3e2a25f0fe7ad3ccbf781"
+      sha256 "c6739646cec374bf73531c3cd87a798acd9e53ddebfa94052ce92990bbdf303e"
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v#{version}/finalizer-doctor_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "f0afc204fbd6415688fa650dc32c38853a8ebe8aab534b314fe0ad7205164a72"
+      sha256 "11d956bceae919267491488ec484ed1d155cc6eb85f795df3eca40afcb4d677f"
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v#{version}/finalizer-doctor_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "4d8b35031ab35dc23dddd5950a63679b41f5812e120ade3c9ced3e26cdb55842"
+      sha256 "d147aa349337cff5b1769881c3ecb4212dc97db70dbe0158082c12d724a6cc08"
       url "https://github.com/alexremn/finalizer-doctor/releases/download/v#{version}/finalizer-doctor_linux_amd64.tar.gz"
     end
   end
